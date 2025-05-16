@@ -302,32 +302,31 @@
             <br><br>
             You're warmly invited to an <span class="highlight">early dinner</span> at my place to celebrate the joy of our <span class="highlight">newly set-up kitchen</span>—and more importantly, to say a big THANK YOU for all the support, comfort, and good vibes you've shared as we settle in away from home.
         </div>
-        
-        <!-- Countdown Timer 
-        <div class="countdown-container">
-            <div class="countdown-title">Counting Down to Our Gathering</div>
-            <div class="countdown" id="countdown">
-                <div class="countdown-item">
-                    <div class="countdown-value" id="days">0</div>
-                    <div class="countdown-label">Days</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-value" id="hours">0</div>
-                    <div class="countdown-label">Hours</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-value" id="minutes">0</div>
-                    <div class="countdown-label">Minutes</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-value" id="seconds">0</div>
-                    <div class="countdown-label">Seconds</div>
-                </div>
-            </div>
-        </div> -->
-        
+               
         <div class="divider"></div>
-        
+
+        <div class="countdown-container">
+    <div class="countdown-title">Countdown to Dinner!</div>
+    <div class="countdown">
+        <div class="countdown-item">
+            <div class="countdown-value" id="days">0</div>
+            <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-item">
+            <div class="countdown-value" id="hours">0</div>
+            <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+            <div class="countdown-value" id="minutes">0</div>
+            <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+            <div class="countdown-value" id="seconds">0</div>
+            <div class="countdown-label">Seconds</div>
+        </div>
+    </div>
+</div>
+       
         <div class="details">
             <div class="detail-row">
                 <div class="detail-label">When:</div>
@@ -367,44 +366,40 @@
     </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-        // Countdown Timer Script
+    window.onload = function () {
         function updateCountdown() {
             const eventDate = new Date('May 18, 2025 15:30:00').getTime();
             const now = new Date().getTime();
             const timeLeft = eventDate - now;
-            
-            // Calculate days, hours, minutes, seconds
+
+            // Calculate time components
             const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
             const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-            
-            // Update the countdown elements
-            document.getElementById('days').innerHTML = days;
-            document.getElementById('hours').innerHTML = hours;
-            document.getElementById('minutes').innerHTML = minutes;
-            document.getElementById('seconds').innerHTML = seconds;
-            
-            // If countdown is over
-            if (timeLeft < 0) {
-                document.getElementById('days').innerHTML = '0';
-                document.getElementById('hours').innerHTML = '0';
-                document.getElementById('minutes').innerHTML = '0';
-                document.getElementById('seconds').innerHTML = '0';
-                
+
+            // Update the countdown display
+            if (timeLeft >= 0) {
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+            } else {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
+
                 const countdownTitle = document.querySelector('.countdown-title');
                 if (countdownTitle) {
-                    countdownTitle.innerHTML = "It's Dinner Time!";
+                    countdownTitle.textContent = "It's Dinner Time!";
                 }
             }
         }
-        
-        // Initial call
-        updateCountdown();
-        
-        // Update every second
-        setInterval(updateCountdown, 1000);
-    </script>
+
+        updateCountdown(); // Initial call
+        setInterval(updateCountdown, 1000); // Repeat every second
+    };
+</script>
 </body>
 </html>
