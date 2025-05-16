@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinner Invitation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', Georgia, serif;
+            background-color: #f9f7f3;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 40px;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)), url('/api/placeholder/400/320');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 2px;
+            position: relative;
+        }
+        .border {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid #d4b78f;
+            pointer-events: none;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 400;
+            color: #2a2a2a;
+            margin-bottom: 10px;
+            text-align: center;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+        .subtitle {
+            font-size: 18px;
+            font-style: italic;
+            text-align: center;
+            color: #5d4a33;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+        .description {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 15px;
+            border-radius: 2px;
+        }
+        .details {
+            margin: 30px 0;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 2px;
+        }
+        .detail-row {
+            display: flex;
+            margin-bottom: 15px;
+            justify-content: center;
+        }
+        .detail-label {
+            width: 100px;
+            font-weight: bold;
+            color: #5d4a33;
+            text-align: right;
+            padding-right: 15px;
+        }
+        .detail-value {
+            flex: 1;
+            max-width: 300px;
+        }
+        .highlight {
+            font-weight: 600;
+            color: #5d4a33;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #5d4a33;
+            font-style: italic;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 2px;
+        }
+        .divider {
+            width: 100px;
+            height: 1px;
+            background-color: #d4b78f;
+            margin: 30px auto;
+            box-shadow: 0px 0px 3px rgba(212, 183, 143, 0.5);
+        }
+        .signature {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 30px;
+            font-style: italic;
+        }
+        .accent {
+            height: 4px;
+            width: 60px;
+            background-color: #d4b78f;
+            margin: 0 auto 30px;
+            box-shadow: 0px 0px 3px rgba(212, 183, 143, 0.5);
+        }
+        .string-lights {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: repeating-radial-gradient(
+                circle at 10px 4px,
+                #fcf0c9 0,
+                #fcf0c9 2px,
+                transparent 2px,
+                transparent 10px
+            );
+            opacity: 0.8;
+        }
+        .whatsapp-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 220px;
+            margin: 30px auto 0;
+            padding: 12px 20px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+            white-space: nowrap;
+        }
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(37, 211, 102, 0.4);
+        }
+        .whatsapp-icon {
+            margin-right: 10px;
+            min-width: 24px;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="string-lights"></div>
+        <div class="border"></div>
+        <h1>Early Dinner at My Place</h1>
+        <div class="accent"></div>
+        <div class="subtitle">An Evening to Unwind and Connect</div>
+        
+        <div class="description">
+            Let's take a break from deadlines and spend a relaxed evening together—with <span class="highlight">home-cooked food</span>, laughter, great conversations, and drinks for those who'd like!
+            <br><br>
+            You're warmly invited to an <span class="highlight">early dinner</span> at my place to celebrate the joy of our <span class="highlight">newly set-up kitchen</span>—and more importantly, to say a big THANK YOU for all the support, comfort, and good vibes you've shared as we settle in away from home.
+        </div>
+        <div class="divider"></div>
+        
+        <div class="details">
+            <div class="detail-row">
+                <div class="detail-label">When:</div>
+                <div class="detail-value">May 18th, 2025 (Sunday)</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Time:</div>
+                <div class="detail-value">3:30 PM sharp</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Where:</div>
+                <div class="detail-value">My cozy rented crib</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Drinks:</div>
+                <div class="detail-value">Optional – feel free to bring your favorite</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Dress Code:</div>
+                <div class="detail-value">Comfy + casual – no suits, just vibes</div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        
+        <div class="footer">
+            Your presence would mean a lot to us.<br>
+            Please RSVP by May 17th so we can cook up something special!
+        </div>
+        
+        <!-- WhatsApp Button -->
+        <a href="https://chat.whatsapp.com/L9gkDbuyoh06KACRL3i5cB" class="whatsapp-button" target="_blank">
+            <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Join WhatsApp Group
+        </a>
+    </div>
+</body>
+</html>
